@@ -1,35 +1,36 @@
-import "./Onepage.scss";
-import Slider from "../../components/Slider/Slider";
+import "./Onepage.scss"
+import Slider from "../../components/Slider/Slider"
+import { SinglePostData } from "../../Lib/dummydata";
 import Map from "../../components/Map/Map"
-import { SinglePostData, userData } from "../../Lib/dummydata";
-function Onepage ()  {
-  return (
-     <div className="Onepage">
-    <div className="details">
-        <div className="wrapper">
-            <Slider images={SinglePostData.images}/>
-            <div className="info">
-            <div className="top">
-               <div className="post">
-                <h1>{SinglePostData.title}</h1>
-                <div className="addrss">
-                    <img src="/pin.png" alt=""/>
-                    <span >{SinglePostData.address}</span>
-               </div>
-               <div className="price">{SinglePostData.price}</div>
-               </div>
-               <div className="user">
-                <img src={userData.img} alt=""/>
-                <span >{userData.name}</span>
-               </div>
+import { userData } from "../../Lib/dummydata";
+function Onepage(){
+    return(
+        <div className="Onepage">
+            <div className="details">
+                <div className="wrapper">
+                    <Slider images={SinglePostData.images}/>
+                    <div className="info">
+                    <div className="top">
+                    <div className="post">
+                        <h1>{SinglePostData.title}</h1>
+                        <div className="address">
+                            <img src="/pin.png" alt=""/>
+                            <span>{SinglePostData.address}</span>
+                        </div>
+                        <div className="price">${SinglePostData.price}</div>
+                    </div>
+                    <div className="user">
+                        <img src={userData.img} alt=""/>
+                        <span>{userData.name}</span>
+                    </div>
+                    </div>
+                    <div className="bottom">
+                        {SinglePostData.description}
+                    </div>
+                </div>
             </div>
-            <div className="bottom">
-           
             </div>
-            </div>
-        </div>
-        </div>
-        <div className="features">
+            <div className="features">
             <div className="wrapper">
                <p className="title">general</p>
                <div className="listVertical">
@@ -112,8 +113,9 @@ function Onepage ()  {
         </div>
 
         </div>
-     </div>
-  )
-};
+        </div>
+    );
+    
 
+}
 export default Onepage;

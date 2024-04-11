@@ -7,7 +7,7 @@ function Navbar(){
     <div className="left">
         <a href="/" className="logo">
             <img src="/logo (5).png" alt="" />
-            <span>LamaEstate</span>
+            <span>rathiestate</span>
         </a>
         <a href="/">home</a>
         <a href="/">about</a>
